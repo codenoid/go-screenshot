@@ -23,16 +23,19 @@ import (
 )
 
 func main() {
+	// start xgb session, you can reuse this for anything else
 	xgbconn, err := screenshot.NewSession()
 	if err != nil {
 		return
 	}
 	defer xgbconn.Close()
 
+	// call screenshot method
 	ss := screenshot.Start{
 		XgbConn: xgbconn,
 	}
 
+	// capture current screen frame
 	img, err := ss.CaptureScreen()
 
 	f, err := os.Create("screenshot.jpg")
