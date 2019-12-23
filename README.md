@@ -4,6 +4,8 @@ another library for taking screenshot on your Linux+,Windows-,Mac-
 
 there is many feature that still missing (like choosing display, set size, etc), and currently only support for linux
 
+and don't worry about [this](https://github.com/BurntSushi/xgb/issues/32) because you can open once and reuse xgb conn
+
 ## Installation
 
 ```
